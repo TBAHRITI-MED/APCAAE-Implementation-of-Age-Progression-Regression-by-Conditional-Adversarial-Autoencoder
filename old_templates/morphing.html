@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Morphing Game</title>
+  </head>
+
+  <body>
+    <h1>Morphing Game</h1>
+    <form method="post" action="{{ url_for('morphing') }}">
+      <h2>Person 1</h2>
+      <label for="age_1">Age:</label>
+      <input type="number" id="age_1" name="age_1" min="0" max="116" required />
+      <br />
+      <label for="gender_1">Gender:</label>
+      <select id="gender_1" name="gender_1">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+      </select>
+      <br />
+      <label for="race_1">Race:</label>
+      <select id="race_1" name="race_1">
+        <option value="0">White</option>
+        <option value="1">Black</option>
+        <option value="2">Asian</option>
+        <option value="3">Indian</option>
+        <option value="4">Other</option>
+      </select>
+      <br />
+
+      <h2>Person 2</h2>
+      <label for="age_2">Age:</label>
+      <input type="number" id="age_2" name="age_2" min="0" max="116" required />
+      <br />
+      <label for="gender_2">Gender:</label>
+      <select id="gender_2" name="gender_2">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+      </select>
+      <br />
+      <label for="race_2">Race:</label>
+      <select id="race_2" name="race_2">
+        <option value="0">White</option>
+        <option value="1">Black</option>
+        <option value="2">Asian</option>
+        <option value="3">Indian</option>
+        <option value="4">Other</option>
+      </select>
+      <br />
+
+      <input type="submit" value="Generate Morphing" />
+    </form>
+
+    {% if image_1 %}
+    <h2>Person 1</h2>
+    <img src="{{ image_1 }}" alt="Person 1 Image" /> {% endif %} {% if image_2
+    %}
+    <h2>Person 2</h2>
+    <img src="{{ image_2 }}" alt="Person 2 Image" /> {% endif %} {% if
+    result_image %}
+    <h2>Morphing Result</h2>
+    <img src="{{ result_image }}" alt="Morphing Result" /> {% endif %}
+  </body>
+</html>

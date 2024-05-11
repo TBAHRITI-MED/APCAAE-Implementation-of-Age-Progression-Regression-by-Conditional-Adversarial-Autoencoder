@@ -75,7 +75,7 @@ The original image and the generated image of the same age group are marked in a
 
 
 
-[The Morph Game](https://github.com/DaoudiAmir/APCAAE/blob/main/morph_game.ipynb).
+[The Morph Game](https://github.com/DaoudiAmir/APCAAE/blob/main/morphing_game.ipynb).
 Two input images are fed to the encoder, and the resulted Z vectors are concatenated with their true labels.
 Then, a set of ![](https://latex.codecogs.com/gif.latex?N&plus;1) vectors is created, with a gradual change from the first vector to the second vector, ![](https://latex.codecogs.com/gif.latex?%5C%7B%20%5Cfrac%7BN-i%7D%7BN%7D%20%5Cvec%7Bz_%7B1%7D%7D%20&plus;%20%5Cfrac%7Bi%7D%7BN%7D%20%5Cvec%7Bz_%7B2%7D%7D%20%5C%7D_%7Bi%3D0%7D%5E%7BN%7D).
 The set of vectors is fed to the generator.
